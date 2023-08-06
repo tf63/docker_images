@@ -11,57 +11,16 @@ services:
     volumes:
       - ./:/app
 
-  # pytorch_111:
-  #   build:
-  #     context: .
-  #     dockerfile: docker/pytorch/Dockerfile.111
-  #   container_name: 'nvidia-docker_111'
-  #   stdin_open: true
-  #   tty: true
-  #   volumes:
-  #     - ./:/app
+#   # 例なのでコメントアウトしておく
+#   postgres:
+#       image: postgres:15.2 # ベースイメージを直接指定 (Dockerfileからビルドしない)
+#       volumes: # volumeマウント
+#           - postgres_data:/var/lib/postgresql/data
+#       ports: # ホストのポートとコンテナのポートをフォワーディング
+#           - 5432:5432
+#       env_file: # 環境変数を.envというファイルから設定する
+#           - .env
 
-  #   deploy:
-  #     resources:
-  #       reservations:
-  #         devices:
-  #           - driver: nvidia
-  #             count: 1
-  #             capabilities: [gpu]
-  
-  # pytorch_171:
-  #   build:
-  #     context: .
-  #     dockerfile: docker/pytorch/Dockerfile.171
-  #   container_name: 'nvidia-docker_171'
-  #   stdin_open: true
-  #   tty: true
-  #   volumes:
-  #     - ./:/app
-
-  #   deploy:
-  #     resources:
-  #       reservations:
-  #         devices:
-  #           - driver: nvidia
-  #             count: 1
-  #             capabilities: [gpu]
-  
-
-  # pytorch_171_2:
-  #   build:
-  #     context: .
-  #     dockerfile: docker/pytorch/Dockerfile.171.2
-  #   container_name: 'nvidia-docker_171_2'
-  #   stdin_open: true
-  #   tty: true
-  #   volumes:
-  #     - ./:/app
-
-  #   deploy:
-  #     resources:
-  #       reservations:
-  #         devices:
-  #           - driver: nvidia
-  #             count: 1
-  #             capabilities: [gpu]
+# # volumeの宣言，Docker EngineがホストOSのどこかに領域を作成する
+# volumes:
+#   postgres_data:
