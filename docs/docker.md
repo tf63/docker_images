@@ -1,6 +1,6 @@
 ### Docker ってなんぞやという話 ~ Docker, Docker Compose のチュートリアル ~ VSCode の Remote Development まで
 
-- ソースコード https://github.com/tf63/docker_images
+- ソースコード https://github.com/tf63/docker_images/tree/python
 
 - ディレクトリ構成
 
