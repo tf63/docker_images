@@ -1,29 +1,23 @@
-### Docker サンプル など
+# NVIDIAイメージを使ったPyTorch環境
 
-- 勉強会用の Docker イメージをまとめておく場所
+コンテナの起動
+```
+    # ビルド
+    bash docker.sh build
+    # 非rootユーザーとして起動
+    bash docker.sh shell
+    # rootとして起動
+    bash docker.sh root
+```
 
-### 記事
+VSCodeにアタッチ
 
-[**Docker ってなんぞやという話 ~ Docker, Docker Compose のチュートリアル ~ VSCode の Remote Development まで**](https://qiita.com/tf63/items/684fe4b818ecd715aed9)
+![](docs/img/docker_nvidia_practice-2.png)
 
-- `docs/docker.md`
+環境の確認
+```
+    python src/check.py
+```
 
-[**Ubuntu で Docker のインストール**](https://qiita.com/tf63/items/c21549ba44224722f301)
-
-- `docs/docker_install.md`
-
-**Docker + Python の環境を作りたい**
-
-- `docs/python.md`
-
-[**Ubuntu で nvidia-docker を使って PyTorch の環境を作りたい**](https://qiita.com/tf63/items/618f192a810c28e4d2b7)
-
-- `docs/docker_nvidia.md`
-
-[**AtCoder の環境を Docker で作りたい**](https://qiita.com/tf63/items/c93c6f24d73599e637d8)
-
-- `docs/atcoder.md`
-
-**Django REST Framework + React + Docker で Web アプリを作りたい**
-
-- `docs/django.md`
+## 備考
+`.devcontainer/`は飾り

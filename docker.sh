@@ -1,4 +1,5 @@
 #!/bin/bash
+# https://github.com/RUB-SysSec/GANDCTAnalysis/blob/master/docker.sh
 
 # usage ------------------------------------------------------------------------
 # bash docker.sh build  # build image
